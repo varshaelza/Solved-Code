@@ -3,9 +3,8 @@
 using namespace std;
 
 int main() {
-    int c;
+    int c=0;
 int *a;
-c=0;
     int n,i,j;
     cin>>n;
    
