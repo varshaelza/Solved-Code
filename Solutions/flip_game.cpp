@@ -78,20 +78,22 @@ int main() {
        }
    }
    
-   int s=0;
-    for(i=0;i<r;i++)
+   long long s=0;
+   /* for(i=0;i<r;i++)
    {
        for(j=0;j<c;j++)
        {
           cout<<a[i][j]<<" ";
        }
        cout<<"\n";
-   }
+   }*/
    for(i=0;i<r;i++)
    {
        for(j=0;j<c;j++)
        {
-           s+=a[i][j]*pow(2,c-j-1);
+           long long p=pow(2,c-j-1);
+           long long ans=(a[i][j]*p);
+           s+=ans;
        }
    }
    cout<<s;
