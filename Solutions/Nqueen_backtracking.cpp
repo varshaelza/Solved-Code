@@ -15,7 +15,7 @@ void printmatrix(int **a,int n)
 }
 int safe(int **a,int i,int c,int n)
 {
-    int j;
+    int j,k;
     if(i>=0 &&i<n&&c>=0&&c<n)
     {
         for(j=0;j<n;j++)
@@ -25,6 +25,23 @@ int safe(int **a,int i,int c,int n)
                 return 0;
             }
             
+        }
+        for(j=i,k=c;j>=0&&k>=0;j--,k--)
+        {
+            
+            {
+                if(a[j][k]==1)
+                return 0;
+            }
+        }
+        
+        for(j=i,k=c;j<n&&k<n;j++,k++)
+        {
+            
+            {
+                if(a[j][k]==1)
+                return 0;
+            }
         }
         return 1;
     }
